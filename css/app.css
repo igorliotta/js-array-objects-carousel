@@ -5,23 +5,28 @@
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .section {
     padding: 200px 0;
 }
 
-.carousel-wrapper {
-    width: 700px;
+.container {
+    max-width: 800px;
     margin: 0 auto;
     position: relative;
 }
 
-.carousel-img {
+.carousel__item {
     width: 100%;
-    aspect-ratio: 23/9; 
+    display: none;
+    aspect-ratio: 21/9; 
     object-fit: cover;
+}
+
+.carousel__item.active {
+    display: block;
 }
 
 .button {
@@ -36,23 +41,28 @@ img {
     position: absolute;
 }
 
-.button-right {
+.button__right {
     top: 45%;
     right: 20px;
 }
 
-.button-left {
+.button__left {
     top: 45%;
     left: 20px;
 }
 
-.img-info {
+.img__info {
     position: absolute;
     text-align: end;
-    top: 65%;
+    top: 60%;
     right: 20px;
     margin-top: 20px;
     color: white;
+    
+}
+
+.img__info.active {
+    display: block;
 }
 
 
