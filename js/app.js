@@ -54,14 +54,19 @@ console.log(itemElements);
 const imgInfoElements = document.querySelectorAll('.img__info');
 console.log(imgInfoElements);
 
+const tumbnailElements = document.querySelectorAll('.tumbnails__item');
+console.log(tumbnailElements);
+
 let currentIndex = 0;
 
 let activeItem = itemElements[currentIndex];
 let activeImgInfo = imgInfoElements[currentIndex];
+let activeTumbnailImg = tumbnailElements[currentIndex];
 
 activeImgInfo.classList.add('active');
 activeItem.classList.add('active');
-console.log(activeItem, activeImgInfo);
+activeTumbnailImg.classList.add('tumbnails__item-active');
+console.log(activeItem, activeImgInfo, activeTumbnailImg);
 
 
 const btnRight = document.querySelector('.carousel .button__right');
@@ -74,7 +79,9 @@ btnRight.addEventListener('click', function () {
     activeImgSlideElement.classList.remove('active');
     const activeImgSlideInfoTextElement = imgInfoElements[currentIndex];
     activeImgSlideInfoTextElement.classList.remove('active');
-    console.log(activeImgSlideElement, activeImgSlideInfoTextElement);
+    const activeSlideTumbnailImg = tumbnailElements[currentIndex];
+    activeSlideTumbnailImg.classList.remove('tumbnails__item-active');
+    console.log(activeImgSlideElement, activeImgSlideInfoTextElement, activeSlideTumbnailImg);
 
     if (currentIndex === itemElements.length - 1) {
         currentIndex = 0;
@@ -86,6 +93,8 @@ btnRight.addEventListener('click', function () {
        nextImgSlideElement.classList.add('active');
        const nextActiveImgSlideInfoTextElement = imgInfoElements[currentIndex];
        nextActiveImgSlideInfoTextElement.classList.add('active');
+       const nextActiveSlideTumbnailImg = tumbnailElements[currentIndex];
+       nextActiveSlideTumbnailImg.classList.add('tumbnails__item-active');
 
 })
 
@@ -95,6 +104,8 @@ btnLeft.addEventListener('click', function () {
     activeImgSlideElement.classList.remove('active');
     const activeImgSlideInfoTextElement = imgInfoElements[currentIndex];
     activeImgSlideInfoTextElement.classList.remove('active');
+    const activeSlideTumbnailImg = tumbnailElements[currentIndex];
+    activeSlideTumbnailImg.classList.remove('tumbnails__item-active');
     console.log(activeImgSlideElement, activeImgSlideInfoTextElement);
 
     if (currentIndex === 0) {
@@ -107,4 +118,6 @@ btnLeft.addEventListener('click', function () {
     nextImgSlideElement.classList.add('active');
     const nextActiveImgSlideInfoTextElement = imgInfoElements[currentIndex];
     nextActiveImgSlideInfoTextElement.classList.add('active');
+    const nextActiveSlideTumbnailImg = tumbnailElements[currentIndex];
+    nextActiveSlideTumbnailImg.classList.add('tumbnails__item-active');
 })
