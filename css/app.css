@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.section {
+    padding: 200px 0;
+}
+
+.carousel-wrapper {
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-img {
+    width: 100%;
+    aspect-ratio: 23/9; 
+    object-fit: cover;
+}
+
+.button {
+    width: 30px;
+    aspect-ratio: 1;
+    background-color: lightgrey;
+    font-size: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.button-right {
+    top: 45%;
+    right: 20px;
+}
+
+.button-left {
+    top: 45%;
+    left: 20px;
+}
+
+.img-info {
+    position: absolute;
+    text-align: end;
+    top: 65%;
+    right: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+
